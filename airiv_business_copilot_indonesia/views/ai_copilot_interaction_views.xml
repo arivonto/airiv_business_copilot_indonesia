@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_airiv_ai_interaction_tree" model="ir.ui.view">
+            <field name="name">airiv.ai.interaction.list</field>
+            <field name="model">airiv.ai.interaction</field>
+            <field name="arch" type="xml">
+                <list string="Riwayat Analisis AI">
+                    <field name="create_date" string="Waktu"/>
+                    <field name="name"/>
+                    <field name="domain_type" widget="badge"/>
+                    <field name="execution_mode" widget="badge"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_airiv_ai_interaction" model="ir.actions.act_window">
+            <field name="name">Log Interaksi AI</field>
+            <field name="res_model">airiv.ai.interaction</field>
+            <field name="view_mode">list,form</field>
+        </record>
+    </data>
+</odoo>

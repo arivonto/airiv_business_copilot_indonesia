@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_airiv_ai_copilot_config_form" model="ir.ui.view">
+            <field name="name">airiv.ai.copilot.config.form</field>
+            <field name="model">airiv.ai.copilot.config</field>
+            <field name="arch" type="xml">
+                <form string="Konfigurasi AI Copilot">
+                    <sheet>
+                        <div class="oe_title">
+                            <span class="o_form_label">Mesin Kecerdasan Buatan Multi-Sektor</span>
+                            <h1><field name="name"/></h1>
+                        </div>
+                        <group>
+                            <group string="Mode Operasi">
+                                <field name="environment" widget="radio"/>
+                                <field name="model_version"/>
+                                <field name="company_id"/>
+                            </group>
+                            <group string="Kredensial API (Jika Live)">
+                                <field name="gemini_api_key" password="True" invisible="environment == 'mock'"/>
+                                <field name="temperature"/>
+                            </group>
+                        </group>
+                        <div class="alert alert-info mt-3" role="alert">
+                            <strong>Offline Mock Simulation:</strong> Anda dapat menguji seluruh fungsi pemindaian struk pembelian (OCR), pembuatan draf resep/SOAP klinis, dan auto-reply WhatsApp tanpa memerlukan API key atau saldo Google Cloud.
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_airiv_ai_copilot_config" model="ir.actions.act_window">
+            <field name="name">Pengaturan AI Copilot</field>
+            <field name="res_model">airiv.ai.copilot.config</field>
+            <field name="view_mode">list,form</field>
+        </record>
+    </data>
+</odoo>

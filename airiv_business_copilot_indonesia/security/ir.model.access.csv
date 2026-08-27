@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_airiv_ai_copilot_config_user,airiv.ai.copilot.config.user,model_airiv_ai_copilot_config,base.group_user,1,1,1,1
+access_airiv_ai_interaction_user,airiv.ai.interaction.user,model_airiv_ai_interaction,base.group_user,1,1,1,1
+access_airiv_ai_document_ocr_wizard_user,airiv.ai.document.ocr.wizard.user,model_airiv_ai_document_ocr_wizard,base.group_user,1,1,1,1

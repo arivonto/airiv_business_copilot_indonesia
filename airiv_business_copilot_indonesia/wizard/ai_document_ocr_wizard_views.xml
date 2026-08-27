@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_airiv_ai_document_ocr_wizard_form" model="ir.ui.view">
+            <field name="name">airiv.ai.document.ocr.wizard.form</field>
+            <field name="model">airiv.ai.document.ocr.wizard</field>
+            <field name="arch" type="xml">
+                <form string="Pemindai Dokumen Cerdas (Gemini AI)">
+                    <sheet>
+                        <group>
+                            <group string="Input Dokumen">
+                                <field name="document_type"/>
+                                <field name="document_file" filename="file_name"/>
+                                <field name="file_name" invisible="1"/>
+                            </group>
+                            <group string="Tindakan">
+                                <button name="action_execute_ai_analysis" string="🚀 Ekstraksi dengan AI" type="object" class="btn-primary btn-block"/>
+                            </group>
+                        </group>
+                        <notebook invisible="not extracted_preview">
+                            <page string="Hasil Ekstraksi Data Terstruktur">
+                                <field name="extracted_preview" widget="text" class="font-monospace"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <footer>
+                        <button string="Tutup" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_airiv_ai_document_ocr_wizard" model="ir.actions.act_window">
+            <field name="name">Ekstraksi Dokumen Cerdas</field>
+            <field name="res_model">airiv.ai.document.ocr.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>
