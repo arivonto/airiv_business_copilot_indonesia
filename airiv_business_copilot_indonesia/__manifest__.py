@@ -24,7 +24,7 @@ Delivers cross-sector automation across Accounting, Commerce, Healthcare, and Op
    - Mode 3: Google Cloud Vertex AI (Enterprise Scalability)
 5. Zero External Server Overhead - 100% Odoo 18 Community Native - Always Free ($0.00).
 """,
-    'author': 'Riv Cloud Management',
+    'author': 'AIRIV',
     'website': 'https://airiv.id',
     'url': 'https://github.com/arivonto/airiv_business_copilot_indonesia/blob/18.0/static/description/index.html',
     'license': 'LGPL-3',
