@@ -26,6 +26,7 @@ Delivers cross-sector automation across Accounting, Commerce, Healthcare, and Op
 """,
     'author': 'Riv Cloud Management',
     'website': 'https://airiv.id',
+    'url': 'https://github.com/arivonto/airiv_business_copilot_indonesia/blob/18.0/static/description/index.html',
     'license': 'LGPL-3',
     'price': 0.0,
     'currency': 'EUR',
@@ -37,6 +38,7 @@ Delivers cross-sector automation across Accounting, Commerce, Healthcare, and Op
         'airiv_whatsapp_indonesia',
         'airiv_clinic_indonesia',
         'airiv_accounting_indonesia',
+        'airiv_os_core',
     ],
     'data': [
         'security/ir.model.access.csv',
